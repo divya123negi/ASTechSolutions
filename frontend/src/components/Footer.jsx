@@ -116,7 +116,7 @@ function Footer() {
 
       {/* Copyright */}
       <div className="border-t border-gray-700 mt-12 pt-6 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} ASTECH SOLTIONS. All Rights Reserved.
+        © {new Date().getFullYear()} ASTECH SOLUTIONS. All Rights Reserved.
       </div>
     </footer>
   );
