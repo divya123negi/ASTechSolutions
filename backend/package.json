@@ -6,12 +6,12 @@
   "type": "module",
   "author": "Divya",
   "license": "ISC",
-"scripts": {
-  "dev": "nodemon src/server.js",
-  "build:frontend": "cd ../frontend && npm ci --include=dev && npm run build",
-  "start": "node src/server.js"
-},
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
   "dependencies": {
+    "astechsolutions": "file:..",
     "bcryptjs": "^3.0.2",
     "cloudinary": "^2.7.0",
     "cors": "^2.8.5",

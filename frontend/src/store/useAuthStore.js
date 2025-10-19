@@ -26,7 +26,7 @@ const useAuthStore = create((set) => ({
 
   checkMe: async () => {
     try {
-      await API.get("/api/auth/validate"); // if 401 -> interceptor not set to redirect, we handle here
+      await API.get("/api/auth/validate"); 
       set({ isAuthenticated: true });
       return true;
     } catch {
