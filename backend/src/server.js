@@ -31,9 +31,25 @@ app.use(express.json({ limit: '15mb' }));
 app.use(express.urlencoded({ extended: true, limit: '15mb' }));
 
 
-if (process.env.NODE_ENV === 'development') {
-  app.use(cors());
-}
+
+const allowedOrigins = [
+  "https://www.astechsolutions.org.in",
+  "https://astechsolutions.org.in",
+  "http://localhost:5173", // for local development
+];
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
+
 
 app.use('/api/projects', projectsRoutes);
 app.use('/api/services', servicesRoutes);
