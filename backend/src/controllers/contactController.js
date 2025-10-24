@@ -30,13 +30,11 @@ export const createContact = async (req, res) => {
       return res.status(400).json({ message: "All fields are required" });
     }
 
-    //  Save to MongoDB
   let newContact;
-try {
+
   newContact = await Contact.create({ name, email, message });
-} catch (dbErr) {
-  console.error("Failed to save contact in DB:", dbErr);
-}
+
+  res.status(201).json({ contact: newContact, message: "Message received!" });
 
 
     //  Configure Nodemailer (Gmail SMTP)
@@ -75,13 +73,14 @@ try {
       `
     };
 
-    //  Send both emails
-    await transporter.sendMail(clientMailOptions);
-    await transporter.sendMail(userMailOptions);
+ Promise.all([
+      transporter.sendMail(clientMailOptions),
+      transporter.sendMail(userMailOptions),
+    ])
+    .then(() => console.log("Emails sent"))
+    .catch((err) => console.error("Email send failed:", err));
 
-    return res
-      .status(201)
-      .json({ contact: newContact, message: "Message sent successfully" });
+    
 
   } catch (error) {
     console.error("Error in createContact:", error);

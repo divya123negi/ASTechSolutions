@@ -5,9 +5,7 @@ import {
   MapPin,
   Send,
   CheckCircle,
-  MessageSquare,
-  Users,
-  Zap,
+
   Clock,
   ChevronDown,
   ChevronUp,
@@ -206,7 +204,7 @@ export default function ContactPage() {
             <div className="space-y-6">
               {contactInfo.map((info, i) => (
                 <div key={i} className="flex items-start space-x-4">
-                  <div className="w-12 h-12 p-3 m-3 bg-red-50 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 p-3  bg-red-50 rounded-xl flex items-center justify-center">
                     {info.icon}
                   </div>
                   <div>
