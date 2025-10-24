@@ -1,12 +1,11 @@
-import React, { useEffect, useState, useRef } from "react";
+import  { useEffect, useState } from "react";
 import {
   Folder,
   User,
   MapPin,
   Calendar,
   ArrowRight,
-  ChevronLeft,
-  ChevronRight,
+
 } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -21,11 +20,8 @@ export default function ProjectPage() {
 
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [filteredProjects, setFilteredProjects] = useState([]);
-  const [currentSlide, setCurrentSlide] = useState(0);
+
   const [selectedProject, setSelectedProject] = useState(null);
-  const slideshowRef = useRef(null);
-  const startX = useRef(0);
-  const isDragging = useRef(false);
 
   // Fetch projects
   useEffect(() => {
@@ -41,55 +37,13 @@ export default function ProjectPage() {
       );
   }, [categoryFilter, projects]);
 
-  // Slideshow projects
-  const slideshowProjects = projects.filter((p) => p.imageUrl).slice(-5);
 
-  // Auto slideshow
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) =>
-        slideshowProjects.length > 0 ? (prev + 1) % slideshowProjects.length : 0
-      );
-    }, 3000);
-    return () => clearInterval(timer);
-  }, [slideshowProjects.length]);
+
 
   const categories = [
     "all",
     ...Array.from(new Set(projects.map((p) => p.category).filter(Boolean))),
   ];
-
-  const handlePrevSlide = () => {
-    setCurrentSlide((prev) =>
-      prev === 0 ? slideshowProjects.length - 1 : prev - 1
-    );
-  };
-
-  const handleNextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slideshowProjects.length);
-  };
-
-  // Swipe gestures for mobile slideshow
-  const handleTouchStart = (e) => {
-    startX.current = e.touches[0].clientX;
-    isDragging.current = true;
-  };
-
-  const handleTouchMove = (e) => {
-    if (!isDragging.current) return;
-    const currentX = e.touches[0].clientX;
-    const diff = startX.current - currentX;
-
-    if (Math.abs(diff) > 50) {
-      if (diff > 0) handleNextSlide();
-      else handlePrevSlide();
-      isDragging.current = false;
-    }
-  };
-
-  const handleTouchEnd = () => {
-    isDragging.current = false;
-  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -106,51 +60,9 @@ export default function ProjectPage() {
 </Helmet>
       <Navbar />
 
-      {/* Hero Slideshow */}
-      {slideshowProjects.length > 0 && (
-        <section
-          ref={slideshowRef}
-          className="relative my-17 w-full h-[24rem] sm:h-[36rem] lg:h-[48rem] overflow-hidden"
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-        >
-          {slideshowProjects.map((project, index) => (
-            <div
-              key={project._id}
-              className={`absolute inset-0 transition-opacity duration-1000 ${
-                index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
-              }`}
-            >
-              <img
-                src={project.imageUrl}
-                alt={project.title}
-                loading="lazy"
-                className="w-full  h-[22rem] sm:h-[34rem] lg:h-[46rem] mt-5 object-contain"
-              />
-            </div>
-          ))}
-
-          {/* Navigation Arrows */}
-          <button
-            onClick={handlePrevSlide}
-            aria-label="Previous slide"
-            className="absolute left-4 sm:left-6 md:left-12 top-1/2 -translate-y-1/2 bg-black/40 text-white p-3 sm:p-4 rounded-full hover:bg-black/60 z-20 min-w-[44px] min-h-[44px]"
-          >
-            <ChevronLeft className="w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8" />
-          </button>
-          <button
-            onClick={handleNextSlide}
-            aria-label="Next slide"
-            className="absolute right-4 sm:right-6 md:right-12 top-1/2 -translate-y-1/2 bg-black/40 text-white p-3 sm:p-4 rounded-full hover:bg-black/60 z-20 min-w-[44px] min-h-[44px]"
-          >
-            <ChevronRight className="w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8" />
-          </button>
-        </section>
-      )}
 
       {/* Projects Section */}
-      <section className="bg-gradient-to-br from-white to-gray-300 py-12 sm:py-16 lg:py-24 px-5 sm:px-10 lg:px-16 xl:px-20">
+      <section className="bg-gradient-to-br from-white to-gray-300 mt-7 py-12 sm:py-16 lg:py-24 px-5 sm:px-10 lg:px-16 xl:px-20">
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-12 max-w-3xl mx-auto">
@@ -311,22 +223,22 @@ export default function ProjectPage() {
 
       
 {/* CTA Section */}
-<section className="bg-gradient-to-br from-red-500 to-red-700 text-white text-center py-14 sm:py-16 lg:py-20 px-6 sm:px-10 lg:px-16 xl:px-20">
-  <div className="max-w-5xl mx-auto">
-    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+<section className="bg-gray-100 py-14 sm:py-16 lg:py-20 px-6 sm:px-10 lg:px-16 xl:px-20">
+  <div className="max-w-5xl mx-auto text-center">
+    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4">
       Bring Your Automation Vision to Life
     </h2>
-    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-red-100 max-w-2xl mx-auto mb-8 sm:mb-10">
+    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto mb-8 sm:mb-10">
       Partner with us to transform your processes, enhance efficiency, and achieve measurable results with our proven automation solutions.
     </p>
     <div className="flex flex-col sm:flex-row justify-center gap-3">
       <Link to="/contact" className="w-full sm:w-auto">
-        <button className="w-full sm:w-auto px-6 py-3 rounded-lg bg-white text-[#E53935] hover:shadow-lg hover:shadow-red-300 active:scale-95 flex items-center justify-center font-medium text-base sm:text-lg duration-150">
+        <button className="w-full sm:w-auto px-6 py-3 rounded-lg bg-[#E53935] text-white hover:shadow-lg hover:shadow-red-300 active:scale-95 flex items-center justify-center font-medium text-base sm:text-lg duration-150">
           Let's Connect <ArrowRight className="ml-2 h-5 w-5" />
         </button>
       </Link>
       <Link to="/services" className="w-full sm:w-auto">
-        <button className="w-full sm:w-auto px-6 py-3 rounded-lg border border-white bg-transparent text-white hover:bg-white hover:text-[#E53935] active:scale-95 transition flex items-center justify-center font-medium text-base duration-200 ease-in-out">
+        <button className="w-full sm:w-auto px-6 py-3 rounded-lg border border-[#E53935] bg-white text-[#E53935] hover:bg-[#E53935] hover:text-white active:scale-95 transition flex items-center justify-center font-medium text-base duration-200 ease-in-out">
           Explore Services
         </button>
       </Link>

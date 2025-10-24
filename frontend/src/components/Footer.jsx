@@ -74,7 +74,7 @@ function Footer() {
           <ul className="space-y-3 text-sm">
             <li className="flex items-center space-x-2">
               <Mail className="h-4 w-4 text-[#E53935]" />
-              <span>astechsolutions25@gmail.com</span>
+              <span>info@astechsolutions.org.in</span>
             </li>
             <li className="flex items-center space-x-2">
               <Phone className="h-4 w-4 text-[#E53935]" />

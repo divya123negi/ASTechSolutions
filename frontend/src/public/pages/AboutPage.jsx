@@ -9,28 +9,16 @@ import { FaAward, FaHandshake, FaUsers, FaLightbulb, FaShieldAlt, FaUserCircle }
 
 const team = [
   {
-    name: "Amit Sharma",
-    role: "Founder & CEO",
-    experience: "15+ years in industrial automation and control systems.",
-    image: "",
+    name: "Santosh",
+    role: "Managing Director",
+    experience: "Dynamic and visionary leader with over 15 years of experience driving large-scale digital transformation through the strategic implementation of intelligent automation. Proven track record of building and scaling high-performing teams, defining enterprise-wide automation roadmaps, and delivering measurable business value, including significant improvements in efficiency and cost reduction. Deep expertise in technologies like Machine and Robotic, Process Automation, Ethanol plant, Distillers, Sugar, Boiler and power and energy.",
+    image: "/Santosh.jpg", 
   },
   {
-    name: "Neha Verma",
-    role: "CTO",
-    experience: "Expert in IoT and smart manufacturing solutions.",
-    image: "",
-  },
-  {
-    name: "Ravi Kumar",
-    role: "Lead Engineer",
-    experience: "Specialist in robotics and embedded systems.",
-    image: "", 
-  },
-  {
-    name: "Priya Singh",
+    name: "Ankit Singh",
     role: "Project Manager",
-    experience: "10+ years managing large-scale automation projects.",
-    image: "",
+    experience: "Ankit Singh is an accomplished automation and project management professional with over 8 years of experience in industrial automation, electrical and mechanical systems integration, and control engineering. He has successfully led complex automation projects across diverse sectors including process, textile, chemical, nonwovens, and energy industries.",
+    image:"/Ankit.jpg",
   },
 ];
 
@@ -173,33 +161,52 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="bg-gradient-to-br from-white to-gray-300 py-8 sm:py-10 lg:py-14 xl:py-16 px-5 sm:px-10 lg:px-16 xl:px-20">
-        <div className="max-w-8xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4">
-            Meet Our Team
-          </h2>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto mb-10 sm:mb-12">
-            A passionate team of experts driving innovation and excellence in industrial automation.
-          </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
-            {team.map((member, i) => (
-              <div key={i} className="bg-white rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-1 transition duration-300 p-4">
-                {member.image ? (
-                  <img src={member.image} alt={member.name} className="w-24 h-24 mx-auto mb-4 object-cover rounded-full border-2 border-gray-100 shadow-md" />
-                ) : (
-                  <div className="w-24 h-24 mx-auto mb-4 flex items-center justify-center rounded-full bg-gray-200 text-gray-400 text-5xl">
-                    <FaUserCircle />
-                  </div>
-                )}
-                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-black mb-1">{member.name}</h3>
-                <p className="text-xs sm:text-sm md:text-base text-[#E53935] mb-1">{member.role}</p>
-                <p className="text-xs sm:text-sm md:text-base text-gray-600">{member.experience}</p>
-              </div>
-            ))}
+    {/* Team Section */}
+<section className="bg-gradient-to-br from-gray-50 to-gray-200 py-16 px-6 sm:px-10 lg:px-16 xl:px-20">
+  <div className="max-w-7xl mx-auto text-center">
+    <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+      Meet Our Team
+    </h2>
+    <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-12">
+      Our dedicated professionals bring innovation, expertise, and passion to every project.
+    </p>
+
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      {team.map((member, i) => (
+        <div
+          key={i}
+          className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100"
+        >
+          {/* Image */}
+          <div className="relative">
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-full h-64 object-cover"
+            />
+            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <span className="text-white font-semibold text-lg">Know More</span>
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="p-6 text-center">
+            <h3 className="text-xl font-semibold text-gray-900 mb-1">
+              {member.name}
+            </h3>
+            <p className="text-[#E53935] text-sm font-medium mb-3">
+              {member.role}
+            </p>
+            <p className="text-gray-600 text-sm leading-relaxed line-clamp-4 group-hover:line-clamp-none transition-all duration-300">
+              {member.experience}
+            </p>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       <Footer />
     </div>

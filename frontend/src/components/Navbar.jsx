@@ -29,7 +29,7 @@ export default function Navbar() {
         transition-shadow duration-300 will-change-transform antialiased
         ${scrolled ? "bg-white shadow-lg border-b border-[#ECECEC]" : "bg-white border-b border-transparent"}`}
     >
-      <div className="max-w-[1600px] mx-auto flex justify-between items-center">
+      <div className="max-w-[1600px] p-4 md:p-0 mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2 md:space-x-3"
         >

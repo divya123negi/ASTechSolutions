@@ -31,13 +31,19 @@ export const createContact = async (req, res) => {
     }
 
     //  Save to MongoDB
-    const newContact = await Contact.create({ name, email, message });
+  let newContact;
+try {
+  newContact = await Contact.create({ name, email, message });
+} catch (dbErr) {
+  console.error("Failed to save contact in DB:", dbErr);
+}
+
 
     //  Configure Nodemailer (Gmail SMTP)
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || "smtp.gmail.com",
-      port: process.env.SMTP_PORT || 587,
-      secure: process.env.SMTP_SECURE === "true", // true for 465, false for others
+      host: process.env.SMTP_HOST ,
+      port: process.env.SMTP_PORT,
+      secure: process.env.SMTP_SECURE === "true", 
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS

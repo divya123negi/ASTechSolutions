@@ -84,6 +84,7 @@ export default function ServicesPage() {
         "Logistics",
         "Chemicals",
         "Water Treatment",
+        "SPM"
       ].map((industry, idx) => (
         <div
           key={idx}
@@ -175,25 +176,26 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-gradient-to-br from-red-500 to-red-700 text-white text-center py-14 sm:py-16 lg:py-20 px-6 sm:px-10 lg:px-16 xl:px-20">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
-            Transform Your Business with Our Expertise
-          </h2>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 max-w-2xl mx-auto mb-8">
-            Partner with us to leverage cutting-edge automation services that deliver real value
-            and measurable impact.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-3">
-            <Link to="/contact" className="w-full sm:w-auto">
-              <button className="w-full sm:w-auto px-6 py-3 rounded-lg bg-white text-[#E53935] hover:shadow-lg hover:shadow-red-300 active:scale-95 flex items-center justify-center font-medium text-base sm:text-lg duration-150">
-                Let's Connect <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-            </Link>
-          </div>
-        </div>
-      </section>
+ 
+   {/* CTA Section */}
+<section className="bg-gray-100 py-14 sm:py-16 lg:py-20 px-6 sm:px-10 lg:px-16 xl:px-20">
+  <div className="max-w-5xl mx-auto text-center">
+    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4">
+      Transform Your Business with Our Expertise
+    </h2>
+    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+      Partner with us to leverage cutting-edge automation services that deliver real value
+      and measurable impact.
+    </p>
+    <div className="flex flex-col sm:flex-row justify-center gap-3">
+      <Link to="/contact" className="w-full sm:w-auto">
+        <button className="w-full sm:w-auto px-6 py-3 rounded-lg bg-[#E53935] text-white hover:shadow-lg hover:shadow-red-300 active:scale-95 flex items-center justify-center font-medium text-base sm:text-lg duration-150">
+          Let's Connect <ArrowRight className="ml-2 h-5 w-5" />
+        </button>
+      </Link>
+    </div>
+  </div>
+</section>
 
       <Footer />
     </div>

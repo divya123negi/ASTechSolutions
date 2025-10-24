@@ -11,7 +11,7 @@ const useContactStore = create((set) => ({
   fetchContacts: async () => {
     set({ loadingContacts: true, error: null });
     try {
-      const res = await API.get("/api/contacts");
+      const res = await API.get("/api/contact");
       set({ contacts: res.data.contacts || [], loadingContacts: false });
       return true;
     } catch (e) {
@@ -27,7 +27,7 @@ const useContactStore = create((set) => ({
   createContact: async (payload) => {
     set({ loadingContacts: true, error: null });
     try {
-      const res = await API.post("/api/contacts", payload);
+      const res = await API.post("/api/contact", payload);
       const saved = res.data.contact || res.data;
       set((s) => ({
         contacts: [saved, ...s.contacts],
@@ -57,7 +57,7 @@ const useContactStore = create((set) => ({
   deleteContact: async (id) => {
     set({ loadingContacts: true, error: null });
     try {
-      await API.delete(`/api/contacts/${id}`);
+      await API.delete(`/api/contact/${id}`);
       set((s) => ({
         contacts: s.contacts.filter((c) => c._id !== id),
         selectedContact:

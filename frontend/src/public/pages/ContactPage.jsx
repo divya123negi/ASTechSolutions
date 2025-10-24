@@ -60,7 +60,7 @@ export default function ContactPage() {
 
   const contactInfo = [
     { icon: <Phone className="h-6 w-6 text-[#E53935]" />, title: "Phone", details: "+91 8700831220" },
-    { icon: <Mail className="h-6 w-6 text-[#E53935]" />, title: "Email", details: "astechsolutions25@gmail.com" },
+    { icon: <Mail className="h-6 w-6 text-[#E53935]" />, title: "Email", details: "info@astechsolutions.org.in" },
     { icon: <MapPin className="h-6 w-6 text-[#E53935]" />, title: "Address", details: "1ST FLOOR, 11/11, Kamal Vihar, Burari, New Delhi, 110084" },
     { icon: <Clock className="h-6 w-6 text-[#E53935]" />, title: "Working Hours", details: "Mon – Sat: 9:00 AM – 6:00 PM" },
   ];
@@ -111,7 +111,7 @@ export default function ContactPage() {
       </a>
       <a
         href="#faq"
-        className="px-5 py-2.5 bg-gray-100 text-gray-800 rounded-lg font-medium text-sm sm:text-base hover:bg-gray-200 transition"
+        className="px-5 py-2.5 bg-gray-100 text-gray-800 rounded-lg font-medium text-sm sm:text-base hover:bg-gray-200 transition "
       >
         Learn More
       </a>
@@ -147,7 +147,7 @@ export default function ContactPage() {
                     value={formData.name}
                     placeholder="Enter your name"
                     onChange={(e) => handleChange("name", e.target.value)}
-                    className={`w-full mt-1 px-4 py-2 rounded-lg border text-black placeholder-gray-400 focus:outline-none focus:ring-2 transition ${
+                    className={`w-full mt-1  bg-white px-4 py-2 rounded-lg border text-black placeholder-gray-400 focus:outline-none focus:ring-2 transition ${
                       errors.name ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:border-[#E53935] focus:ring-[#E53935]"
                     }`}
                   />
@@ -162,7 +162,7 @@ export default function ContactPage() {
                     value={formData.email}
                     placeholder="Enter your email"
                     onChange={(e) => handleChange("email", e.target.value)}
-                    className={`w-full mt-1 px-4 py-2 rounded-lg border text-black placeholder-gray-400 focus:outline-none focus:ring-2 transition ${
+                    className={`w-full bg-white mt-1 px-4 py-2 rounded-lg border text-black placeholder-gray-400 focus:outline-none focus:ring-2 transition ${
                       errors.email ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:border-[#E53935] focus:ring-[#E53935]"
                     }`}
                   />
@@ -177,7 +177,7 @@ export default function ContactPage() {
                     value={formData.message}
                     placeholder="Write your message here..."
                     onChange={(e) => handleChange("message", e.target.value)}
-                    className={`w-full mt-1 px-4 py-2 rounded-lg border text-black placeholder-gray-400 focus:outline-none focus:ring-2 transition ${
+                    className={`w-full bg-white mt-1 px-4 py-2 rounded-lg border text-black placeholder-gray-400 focus:outline-none focus:ring-2 transition ${
                       errors.message ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:border-[#E53935] focus:ring-[#E53935]"
                     }`}
                   />
@@ -206,7 +206,7 @@ export default function ContactPage() {
             <div className="space-y-6">
               {contactInfo.map((info, i) => (
                 <div key={i} className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 p-3 m-3 bg-red-50 rounded-xl flex items-center justify-center">
                     {info.icon}
                   </div>
                   <div>

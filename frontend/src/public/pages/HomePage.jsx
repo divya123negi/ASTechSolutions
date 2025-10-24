@@ -136,29 +136,32 @@ function HomePage() {
 
 
 
-<section className="bg-gradient-to-br from-red-500 to-red-700 text-white text-center py-14 sm:py-16 lg:py-20 px-6 sm:px-10 lg:px-16 xl:px-20">
-  <div className="max-w-5xl mx-auto">
-    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-       Ready to Transform Your Operations?
+{/* CTA Section */}
+<section className="bg-gray-100 py-14 sm:py-16 lg:py-20 px-6 sm:px-10 lg:px-16 xl:px-20">
+  <div className="max-w-5xl mx-auto text-center">
+    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4">
+      Ready to Transform Your Operations?
     </h2>
-    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-red-100 max-w-2xl mx-auto mb-8 sm:mb-10">
+    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto mb-8 sm:mb-10">
       Let's discuss how our automation solutions can drive efficiency,
-            reduce costs, and position your business for future growth.
+      reduce costs, and position your business for future growth.
     </p>
     <div className="flex flex-col sm:flex-row justify-center gap-3">
       <Link to="/contact" className="w-full sm:w-auto">
-        <button className="w-full sm:w-auto px-6 py-3 rounded-lg bg-white text-[#E53935] hover:shadow-lg hover:shadow-red-300 active:scale-95 flex items-center justify-center font-medium text-base sm:text-lg duration-150">
+        <button className="w-full sm:w-auto px-6 py-3 rounded-lg bg-[#E53935] text-white hover:shadow-lg hover:shadow-red-300 active:scale-95 flex items-center justify-center font-medium text-base sm:text-lg duration-150">
           Let's Connect <ArrowRight className="ml-2 h-5 w-5" />
         </button>
       </Link>
       <Link to="/services" className="w-full sm:w-auto">
-        <button className="w-full sm:w-auto px-6 py-3 rounded-lg border border-white bg-transparent text-white hover:bg-white hover:text-[#E53935] active:scale-95 transition flex items-center justify-center font-medium text-base duration-200 ease-in-out">
+        <button className="w-full sm:w-auto px-6 py-3 rounded-lg border border-[#E53935] bg-white text-[#E53935] hover:bg-[#E53935] hover:text-white active:scale-95 transition flex items-center justify-center font-medium text-base duration-200 ease-in-out">
           Explore Services
         </button>
       </Link>
     </div>
   </div>
 </section>
+
+
       <Footer />
     </div>
   );
