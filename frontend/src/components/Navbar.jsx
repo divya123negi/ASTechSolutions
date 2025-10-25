@@ -34,7 +34,7 @@ export default function Navbar() {
         <Link to="/" className="flex items-center space-x-2 md:space-x-3"
         >
           <img src="/logo.png" alt="Logo" className="h-6 sm:h-8 md:h-10 lg:h-12" />
-          <span className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl font-bold tracking-wide text-[#121212] antialiased">
+          <span className="text-lg sm:text-xl md:text-2xl font-bold tracking-wide text-[#121212] antialiased">
             A<span className="text-[#fe353e]">S</span>TECH SOLUTIONS
           </span>
         </Link>
@@ -48,7 +48,7 @@ export default function Navbar() {
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className={({ isActive }) =>
                 `relative font-medium transition-colors duration-200 
-                text-sm md:text-base lg:text-base xl:text-lg antialiased 
+                text-sm md:text-base antialiased 
                 ${isActive ? "text-[#E53935] font-semibold" : "text-[#444444] hover:text-[#E53935]"}`
               }
             >
