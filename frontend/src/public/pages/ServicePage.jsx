@@ -45,12 +45,12 @@ export default function ServicesPage() {
 
   {/* Content */}
   <div className="relative text-center max-w-4xl mx-auto text-white">
-    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 drop-shadow-lg">
+    <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight mb-6 drop-shadow-lg">
       Delivering{" "}
       <span className="text-[#E53935] drop-shadow-lg">Industrial Automation Solutions</span>
     </h1>
 
-    <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto drop-shadow">
+    <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mx-auto drop-shadow">
       Explore our wide range of services designed to help businesses optimize processes,
       reduce costs, and achieve sustainable growth.
     </p>
@@ -62,10 +62,10 @@ export default function ServicesPage() {
 <section className="w-full bg-gradient-to-br from-white to-gray-300 py-12 sm:py-16 lg:py-24 px-6 sm:px-10 lg:px-16 xl:px-20">
   <div className="max-w-7xl mx-auto text-center">
     {/* Section Heading */}
-    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
       Industries We Serve
     </h2>
-    <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+    <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto mb-12">
       Our automation and engineering solutions are trusted across multiple industries, helping businesses 
       improve efficiency, safety, and productivity.
     </p>
@@ -92,7 +92,7 @@ export default function ServicesPage() {
                      shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 
                      p-6 flex items-center justify-center"
         >
-          <span className="text-sm sm:text-base md:text-lg font-semibold text-gray-900">
+          <span className="text-sm sm:text-base font-semibold text-gray-900">
             {industry}
           </span>
         </div>
@@ -108,10 +108,10 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto">
           {/* Section Heading */}
           <div className="text-center mb-12 max-w-3xl mx-auto">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-black mb-4">
               Explore Our Services
             </h2>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600">
+            <p className="text-sm sm:text-base md:text-lg  text-gray-600">
               Browse our tailored automation services that drive efficiency, improve performance,
               and transform operations across industries.
             </p>
@@ -125,7 +125,7 @@ export default function ServicesPage() {
               </div>
             ) : services.length === 0 ? (
               <div className="col-span-full text-center text-gray-500 py-10">
-                <p className="text-base sm:text-lg font-medium">No services available at the moment.</p>
+                <p className="text-base  font-medium">No services available at the moment.</p>
               </div>
             ) : (
               services.map((service) => (
@@ -140,11 +140,11 @@ export default function ServicesPage() {
 
                   {/* Card Body */}
                   <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-lg sm:text-xl font-semibold text-black mb-3 line-clamp-2">
+                    <h3 className="text-lg  font-semibold text-black mb-3 line-clamp-2">
                       {service.title}
                     </h3>
 
-                    <p className="text-sm sm:text-base text-gray-600 mb-4 line-clamp-4">
+                    <p className="text-sm  text-gray-600 mb-4 line-clamp-4">
                       {service.description}
                     </p>
 
@@ -154,14 +154,14 @@ export default function ServicesPage() {
                           {service.services.slice(0, 4).map((item, idx) => (
                             <div
                               key={idx}
-                              className="flex items-start gap-2 text-xs sm:text-sm text-gray-700"
+                              className="flex items-start gap-2 text-xs text-gray-700"
                             >
                               <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
                               <span>{item}</span>
                             </div>
                           ))}
                           {service.services.length > 4 && (
-                            <span className="text-gray-500 text-xs sm:text-sm col-span-full italic">
+                            <span className="text-gray-500 text-xs col-span-full italic">
                               + more services
                             </span>
                           )}
@@ -180,16 +180,16 @@ export default function ServicesPage() {
    {/* CTA Section */}
 <section className="bg-gray-100 py-14 sm:py-16 lg:py-20 px-6 sm:px-10 lg:px-16 xl:px-20">
   <div className="max-w-5xl mx-auto text-center">
-    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4">
+    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-black mb-4">
       Transform Your Business with Our Expertise
     </h2>
-    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+    <p className="text-sm sm:text-base md:text-lg  text-gray-600 max-w-2xl mx-auto mb-8">
       Partner with us to leverage cutting-edge automation services that deliver real value
       and measurable impact.
     </p>
     <div className="flex flex-col sm:flex-row justify-center gap-3">
       <Link to="/contact" className="w-full sm:w-auto">
-        <button className="w-full sm:w-auto px-6 py-3 rounded-lg bg-[#E53935] text-white hover:shadow-lg hover:shadow-red-300 active:scale-95 flex items-center justify-center font-medium text-base sm:text-lg duration-150">
+        <button className="w-full sm:w-auto px-6 py-3 rounded-lg bg-[#E53935] text-white hover:shadow-lg hover:shadow-red-300 active:scale-95 flex items-center justify-center font-medium text-base  duration-150">
           Let's Connect <ArrowRight className="ml-2 h-5 w-5" />
         </button>
       </Link>

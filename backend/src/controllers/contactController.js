@@ -73,7 +73,9 @@ export const createContact = async (req, res) => {
       `
     };
 
- Promise.all([
+
+
+ await Promise.all([
       transporter.sendMail(clientMailOptions),
       transporter.sendMail(userMailOptions),
     ])

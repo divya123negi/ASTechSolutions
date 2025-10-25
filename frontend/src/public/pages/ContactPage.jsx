@@ -93,23 +93,23 @@ export default function ContactPage() {
       >
         <div className="absolute inset-0 bg-black opacity-70"></div>
         <div className="relative z-10 text-center text-white">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl  font-extrabold leading-tight mb-4">
          Let&apos;s Build Your <span className="text-[#E53935]">Future Together</span>
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed mb-6">
+          <p className="text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed mb-6">
             Whether it&apos;s automation, industrial solutions, or digital transformation — 
       our experts are ready to guide you every step of the way.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
         href="#contact"
-        className="px-5 py-2.5 rounded-lg bg-[#E53935] text-white hover:shadow-lg hover:shadow-red-400 active:scale-95 transition flex items-center justify-center font-medium text-sm sm:text-base"
+        className="px-5 py-2.5 rounded-lg bg-[#E53935] text-white hover:shadow-lg hover:shadow-red-400 active:scale-95 transition flex items-center justify-center font-medium text-sm "
       >
         Contact Us
       </a>
       <a
         href="#faq"
-        className="px-5 py-2.5 bg-gray-100 text-gray-800 rounded-lg font-medium text-sm sm:text-base hover:bg-gray-200 transition "
+        className="px-5 py-2.5 bg-gray-100 text-gray-800 rounded-lg font-medium text-sm   hover:bg-gray-200 transition "
       >
         Learn More
       </a>
@@ -124,21 +124,21 @@ export default function ContactPage() {
       <section id="contact" className="bg-gradient-to-br from-white to-gray-200 py-16 sm:py-20 lg:py-24 px-5 sm:px-10 lg:px-16 xl:px-20">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14">
           <div className="bg-white shadow-md rounded-2xl p-6 sm:p-8">
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-black mb-2">Get in Touch</h2>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 mb-6">
+            <h2 className="text-lg sm:text-xl md:text-2xl  font-bold text-black mb-2">Get in Touch</h2>
+            <p className="text-sm sm:text-base md:text-lg  text-gray-600 mb-6">
               Fill out the form below and our team will respond quickly.
             </p>
 
             {isSubmitted ? (
               <div className="text-center py-10">
                 <CheckCircle className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-xl sm:text-2xl font-semibold text-black">Thank you for contacting us!</h3>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600">We&apos;ve received your message and will get back to you soon.</p>
+                <h3 className="text-xl font-semibold text-black">Thank you for contacting us!</h3>
+                <p className="text-sm sm:text-base md:text-lg  text-gray-600">We&apos;ve received your message and will get back to you soon.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} noValidate className="space-y-5">
                 <div>
-                  <label htmlFor="name" className="block text-base sm:text-lg md:text-xl font-medium text-black">Name *</label>
+                  <label htmlFor="name" className="block text-base sm:text-lg font-medium text-black">Name *</label>
                   <input
                     id="name"
                     type="text"
@@ -149,11 +149,11 @@ export default function ContactPage() {
                       errors.name ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:border-[#E53935] focus:ring-[#E53935]"
                     }`}
                   />
-                  {errors.name && <p className="text-xs sm:text-sm md:text-base text-red-600 mt-1">{errors.name}</p>}
+                  {errors.name && <p className="text-xs sm:text-sm  text-red-600 mt-1">{errors.name}</p>}
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-base sm:text-lg md:text-xl font-medium text-black">Email *</label>
+                  <label htmlFor="email" className="block text-base sm:text-lg font-medium text-black">Email *</label>
                   <input
                     id="email"
                     type="text"
@@ -164,11 +164,11 @@ export default function ContactPage() {
                       errors.email ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:border-[#E53935] focus:ring-[#E53935]"
                     }`}
                   />
-                  {errors.email && <p className="text-xs sm:text-sm md:text-base text-red-600 mt-1">{errors.email}</p>}
+                  {errors.email && <p className="text-xs sm:text-sm text-red-600 mt-1">{errors.email}</p>}
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-base sm:text-lg md:text-xl font-medium text-black">Message *</label>
+                  <label htmlFor="message" className="block text-base sm:text-lg font-medium text-black">Message *</label>
                   <textarea
                     id="message"
                     rows={5}
@@ -179,10 +179,10 @@ export default function ContactPage() {
                       errors.message ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:border-[#E53935] focus:ring-[#E53935]"
                     }`}
                   />
-                  {errors.message && <p className="text-xs sm:text-sm md:text-base text-red-600 mt-1">{errors.message}</p>}
+                  {errors.message && <p className="text-xs sm:text-sm  text-red-600 mt-1">{errors.message}</p>}
                 </div>
 
-                {error && <p className="text-xs sm:text-sm md:text-base font-medium text-red-600">{error}</p>}
+                {error && <p className="text-xs sm:text-sm  font-medium text-red-600">{error}</p>}
 
                 <button
                   type="submit"
@@ -197,8 +197,8 @@ export default function ContactPage() {
           </div>
 
           <div className="bg-white shadow-md rounded-2xl p-6 sm:p-8 space-y-6">
-            <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-black mb-4">Company Details</h3>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 mb-6">
+            <h3 className="text-lg sm:text-xl md:text-2xl  font-bold text-black mb-4">Company Details</h3>
+            <p className="text-sm sm:text-base md:text-lg  text-gray-600 mb-6">
               You can reach us directly via phone, email, or visit our office during working hours.
             </p>
             <div className="space-y-6">
@@ -208,8 +208,8 @@ export default function ContactPage() {
                     {info.icon}
                   </div>
                   <div>
-                    <h3 className="text-base sm:text-lg md:text-xl font-semibold text-black">{info.title}</h3>
-                    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600">{info.details}</p>
+                    <h3 className="text-base sm:text-lg font-semibold text-black">{info.title}</h3>
+                    <p className="text-sm sm:text-base md:text-lg  text-gray-600">{info.details}</p>
                   </div>
                 </div>
               ))}
@@ -221,15 +221,15 @@ export default function ContactPage() {
       {/* FAQ Section */}
       <section id="faq" className="py-16 sm:py-20 lg:py-24 bg-white border-t border-gray-200">
         <div className="max-w-5xl mx-auto px-5 sm:px-10 lg:px-16">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center mb-12">Frequently Asked Questions</h2>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-black text-center mb-12">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-xl shadow-md p-6 cursor-pointer transition hover:shadow-lg" onClick={() => toggleFAQ(i)}>
                 <div className="flex justify-between items-center">
-                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-black">{faq.question}</h3>
+                  <h3 className="text-base sm:text-lg  font-semibold text-black">{faq.question}</h3>
                   {openIndex === i ? <ChevronUp className="h-5 w-5 text-gray-700" /> : <ChevronDown className="h-5 w-5 text-gray-700" />}
                 </div>
-                {openIndex === i && <p className="mt-3 text-sm sm:text-base md:text-lg lg:text-xl text-gray-600">{faq.answer}</p>}
+                {openIndex === i && <p className="mt-3 text-sm sm:text-base md:text-lg  text-gray-600">{faq.answer}</p>}
               </div>
             ))}
           </div>

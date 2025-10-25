@@ -16,7 +16,7 @@ const team = [
   },
   {
     name: "Ankit Singh",
-    role: "Project Manager",
+    role: "Director",
     experience: "Ankit Singh is an accomplished automation and project management professional with over 8 years of experience in industrial automation, electrical and mechanical systems integration, and control engineering. He has successfully led complex automation projects across diverse sectors including process, textile, chemical, nonwovens, and energy industries.",
     image:"/Ankit.jpg",
   },
@@ -53,10 +53,10 @@ export default function AboutPage() {
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 text-center text-white">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight mb-4">
             Helping Businesses <span className="text-[#E53935]">Succeed</span> with <span className="text-[#E53935]">Automation</span>
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed mb-6">
+          <p className="text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed mb-6">
             We believe automation should be accessible to every manufacturer.
             Our solutions empower businesses of all sizes to streamline
             operations, reduce costs, and unlock growth with intelligent
@@ -78,7 +78,7 @@ export default function AboutPage() {
       {/* About Us Section */}
       <section className="bg-gradient-to-br from-white to-gray-100 py-8 sm:py-10 lg:py-14 xl:py-16 px-6 sm:px-10 lg:px-16 xl:px-20">
         <div className="max-w-10xl mx-auto text-center mb-4 sm:mb-6 lg:mb-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-5">
+          <h2 className="text-2xl sm:text-3xl font-bold text-black mb-5">
             About Us
           </h2>
         </div>
@@ -91,13 +91,13 @@ export default function AboutPage() {
             />
           </div>
           <div className="space-y-3 text-left ">
-            <p className="text-gray-700 text-sm sm:text-base md:text-lg lg:text-xl">
+            <p className="text-gray-700 text-sm sm:text-base md:text-lg ">
               With years of experience in manufacturing, robotics, and process optimization, our mission is to make advanced automation accessible for businesses of all sizes.
             </p>
-            <p className="text-gray-700 text-sm sm:text-base md:text-lg lg:text-xl">
+            <p className="text-gray-700 text-sm sm:text-base md:text-lg">
               From smart factories to IoT-enabled production lines, we deliver solutions tailored to your unique needs, ensuring efficiency, innovation, and measurable growth.
             </p>
-            <p className="text-gray-700 text-sm sm:text-base md:text-lg lg:text-xl">
+            <p className="text-gray-700 text-sm sm:text-base md:text-lg">
               Our commitment to quality and innovation drives every project we take on, making us a trusted partner for businesses looking to transform their operations through technology.
             </p>
           </div>
@@ -117,7 +117,7 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold">Our Mission</h3>
               </div>
               <div className="w-14 h-1 bg-gradient-to-r from-[#E53935] to-red-500 rounded-full"></div>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg  text-gray-300 leading-relaxed">
                Our mission is to make advanced automation accessible to mid-size manufacturers by bringing them innovative, reliable, and cost-effective solutions-once reserved for large enterprises-delivered with the dedication and agility of a passionate growing team.
               </p>
             </div>
@@ -130,7 +130,7 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold">Our Vision</h3>
               </div>
               <div className="w-14 h-1 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg  text-gray-300 leading-relaxed">
                 To become the premier automation partner for growth-oriented manufacturers, known for innovative solutions, exceptional service, and the ability to transform operations through intelligent automation that drives real business results.
               </p>
             </div>
@@ -141,10 +141,10 @@ export default function AboutPage() {
       {/* Core Values Section */}
       <section className="bg-white py-10 sm:py-12 lg:py-16 px-6 sm:px-10 lg:px-16 xl:px-20">
         <div className="max-w-7xl mx-auto text-center mb-10 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4">
+          <h2 className="text-2xl sm:text-3xl  font-bold text-black mb-4">
             Our Core Values
           </h2>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto mb-10 sm:mb-12">
+          <p className="text-sm sm:text-base md:text-lg  text-gray-600 max-w-2xl mx-auto mb-10 sm:mb-12">
             The principles that guide ASTech Solutions and drive us to deliver excellence, innovation, and trust in every project.
           </p>
         </div>
@@ -154,8 +154,8 @@ export default function AboutPage() {
               <div className={`w-16 h-16 rounded-2xl flex items-center justify-center my-6 ${index % 2 === 0 ? 'bg-[#E53935]' : 'bg-[#2e3846]'}`}>
                 {value.icon}
               </div>
-              <h3 className="text-base sm:text-lg md:text-xl font-semibold text-black mb-1">{value.title}</h3>
-              <p className="text-xs sm:text-sm md:text-base text-gray-600">{value.description}</p>
+              <h3 className="text-base sm:text-lg font-semibold text-black mb-1">{value.title}</h3>
+              <p className="text-xs sm:text-sm  text-gray-600">{value.description}</p>
             </div>
           ))}
         </div>
@@ -164,10 +164,10 @@ export default function AboutPage() {
     {/* Team Section */}
 <section className="bg-gradient-to-br from-gray-50 to-gray-200 py-16 px-6 sm:px-10 lg:px-16 xl:px-20">
   <div className="max-w-7xl mx-auto text-center">
-    <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+    <h2 className="text-3xl font-bold text-gray-900 mb-4">
       Meet Our Team
     </h2>
-    <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-12">
+    <p className="text-base sm:text-lg  text-gray-600 max-w-2xl mx-auto mb-12">
       Our dedicated professionals bring innovation, expertise, and passion to every project.
     </p>
 

@@ -66,10 +66,10 @@ export default function ProjectPage() {
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-12 max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4">
+            <h2 className="text-2xl sm:text-3xl  font-bold text-black mb-4">
               Discover Our <span className="text-[#E53935]">Project Portfolio</span>
             </h2>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600">
+            <p className="text-sm sm:text-base md:text-lg  text-gray-600">
               Browse our industrial automation projects showcasing cost reduction, efficiency, and operational excellence.
             </p>
           </div>
@@ -80,7 +80,7 @@ export default function ProjectPage() {
               <button
                 key={cat}
                 onClick={() => setCategoryFilter(cat)}
-                className={`px-4 py-2 rounded-full text-xs sm:text-sm md:text-base font-medium transition ${
+                className={`px-4 py-2 rounded-full text-xs sm:text-sm  font-medium transition ${
                   categoryFilter === cat
                     ? "bg-[#E53935]/90 text-white shadow-md"
                     : "bg-gray-100 text-gray-800 hover:bg-gray-200"
@@ -99,7 +99,7 @@ export default function ProjectPage() {
               </div>
             ) : filteredProjects.length === 0 ? (
               <div className="col-span-full text-center text-gray-500">
-                <p className="text-base sm:text-lg font-medium mb-4">
+                <p className="text-base  font-medium mb-4">
                   No projects found for this category.
                 </p>
               </div>
@@ -113,7 +113,7 @@ export default function ProjectPage() {
                   {/* Image & Badge */}
                   <div className="relative">
                     {project.category && (
-                      <span className="absolute top-4 left-4 text-xs sm:text-sm font-medium text-white bg-[#E53935]/90 px-3 py-1 rounded-full z-10 shadow">
+                      <span className="absolute top-4 left-4 text-xs font-medium text-white bg-[#E53935]/90 px-3 py-1 rounded-full z-10 shadow">
                         {project.category}
                       </span>
                     )}
@@ -134,15 +134,15 @@ export default function ProjectPage() {
 
                   {/* Details */}
                   <div className="p-4 sm:p-6 flex flex-col flex-grow">
-                    <h3 className="text-lg sm:text-xl font-semibold text-black mb-2 line-clamp-2">
+                    <h3 className="text-lg  font-semibold text-black mb-2 line-clamp-2">
                       {project.title}
                     </h3>
-                    <p className="text-sm md:text-base text-gray-600 mb-4 line-clamp-3">
+                    <p className="text-sm  text-gray-600 mb-4 line-clamp-3">
                       {project.description}
                     </p>
 
                     {/* Client, Location, Year */}
-                    <div className="flex flex-col gap-1.5 mb-4 text-gray-500 text-xs sm:text-sm">
+                    <div className="flex flex-col gap-1.5 mb-4 text-gray-500 text-xs ">
                       {project.clientName && (
                         <span className="flex items-center gap-1">
                           <User className="w-4 h-4 text-[#E53935]" /> {project.clientName}
@@ -162,7 +162,7 @@ export default function ProjectPage() {
 
                     {/* Technologies */}
                     <div className="mt-auto">
-                      <span className="text-gray-500 text-xs sm:text-sm font-medium">Technologies Used:</span>
+                      <span className="text-gray-500 text-xs font-medium">Technologies Used:</span>
                       <div className="flex flex-wrap gap-2 mt-1">
                         {project.technologiesUsed?.length > 0 ? (
                           project.technologiesUsed.map((tech, idx) => (
@@ -225,15 +225,15 @@ export default function ProjectPage() {
 {/* CTA Section */}
 <section className="bg-gray-100 py-14 sm:py-16 lg:py-20 px-6 sm:px-10 lg:px-16 xl:px-20">
   <div className="max-w-5xl mx-auto text-center">
-    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4">
+    <h2 className="text-2xl sm:text-3xl  font-bold text-black mb-4">
       Bring Your Automation Vision to Life
     </h2>
-    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto mb-8 sm:mb-10">
+    <p className="text-sm sm:text-base md:text-lg  text-gray-600 max-w-2xl mx-auto mb-8 sm:mb-10">
       Partner with us to transform your processes, enhance efficiency, and achieve measurable results with our proven automation solutions.
     </p>
     <div className="flex flex-col sm:flex-row justify-center gap-3">
       <Link to="/contact" className="w-full sm:w-auto">
-        <button className="w-full sm:w-auto px-6 py-3 rounded-lg bg-[#E53935] text-white hover:shadow-lg hover:shadow-red-300 active:scale-95 flex items-center justify-center font-medium text-base sm:text-lg duration-150">
+        <button className="w-full sm:w-auto px-6 py-3 rounded-lg bg-[#E53935] text-white hover:shadow-lg hover:shadow-red-300 active:scale-95 flex items-center justify-center font-medium text-base duration-150">
           Let's Connect <ArrowRight className="ml-2 h-5 w-5" />
         </button>
       </Link>

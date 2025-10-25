@@ -33,7 +33,7 @@ export default function AdminLogin() {
             type="text"
             placeholder="Username"
             autoComplete="off"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:border-red-600 focus:ring-2 focus:ring-red-200 outline-none transition"
+            className="w-full bg-white px-4 py-2 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:border-red-600 focus:ring-2 focus:ring-red-200 outline-none transition"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
@@ -44,7 +44,7 @@ export default function AdminLogin() {
             type="password"
             placeholder="Password"
             autoComplete="off"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:border-red-600 focus:ring-2 focus:ring-red-200 outline-none transition"
+            className="w-full bg-white px-4 py-2 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:border-red-600 focus:ring-2 focus:ring-red-200 outline-none transition"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />

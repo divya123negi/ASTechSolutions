@@ -7,7 +7,7 @@ import DashboardHeader from "../../components/DashboardHeader";
 
 export default function Contacts() {
   const { contacts, fetchContacts, loadingContacts, deleteContact } = useContactStore();
-  const [selectedContact, setSelectedContact] = useState(null);
+
 
   useEffect(() => {
     fetchContacts()
