@@ -14,12 +14,7 @@ const team = [
     experience: "Dynamic and visionary leader with over 15 years of experience driving large-scale digital transformation through the strategic implementation of intelligent automation. Proven track record of building and scaling high-performing teams, defining enterprise-wide automation roadmaps, and delivering measurable business value, including significant improvements in efficiency and cost reduction. Deep expertise in technologies like Machine and Robotic, Process Automation, Ethanol plant, Distillers, Sugar, Boiler and power and energy.",
     image: "/Santosh.jpg", 
   },
-  {
-    name: "Ankit Singh",
-    role: "Director",
-    experience: "Ankit Singh is an accomplished automation and project management professional with over 8 years of experience in industrial automation, electrical and mechanical systems integration, and control engineering. He has successfully led complex automation projects across diverse sectors including process, textile, chemical, nonwovens, and energy industries.",
-    image:"/Ankit.jpg",
-  },
+
 ];
 
 const values = [
